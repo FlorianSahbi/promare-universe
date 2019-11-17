@@ -1,0 +1,195 @@
+a:hover {
+  cursor: pointer;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Raleway', Helvetica, Roboto, Arial, sans-serif;
+  background: rgb(214, 199, 199);
+}
+
+audio {
+  display: none;
+}
+
+.changer {
+  position: absolute;
+  z-index: 30;
+  width: 240px;
+  left: 10%;
+  bottom: 10%;
+  padding: 0px;
+  color: #777777;
+}
+
+.changer .sub {
+  font-weight: 300;
+}
+
+.changer h1 {
+  font-size: 2.25em;
+  font-weight: 800;
+}
+
+.changer .demos {
+  line-height: 1;
+}
+
+.changer .demos a {
+  color: #fff;
+  display: block;
+  margin: 15px 0;
+  font-size: 0.75em;
+  border: solid 1px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 800;
+  border-radius: 12px;
+}
+
+.changer .demos a[data-go="1"] {
+  color: #40BBB8;
+}
+
+.changer .demos a[data-go="2"] {
+  /* color: #B24600; */
+  color: white;
+  background: #04247F;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  border: 2px solid #0042ff;
+}
+
+.changer .demos a[data-go="3"] {
+  color: #98ADA4;
+}
+
+#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#container>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+img#title {
+  opacity: 0;
+  transform: translate(0%, -50%)
+}
+
+[data-demo="1"] #container #f1 {
+  left: 40%;
+  right: auto;
+  width: 100%;
+  animation: roll 60s linear infinite;
+}
+
+[data-demo="2"] #container #f1 {
+  animation: zoomout 18s cubic-bezier(0.55, 0.09, 1, 0.24), blur 10s linear;
+}
+
+[data-demo="2"] img#title {
+  animation: swipdown 0.5s ease-in 19s;
+  animation-fill-mode: forwards;
+}
+
+[data-demo="2"] #container #f2 {
+  transform: scale(1.1);
+  animation: zoomout 30s linear infinite;
+}
+
+[data-demo="2"] #container #f3 {
+  transform: scale(1.1);
+  animation: zoomout 30s linear infinite;
+}
+
+[data-demo="3"] #container #f1 {
+  transform: translate(10%, 0%);
+  opacity: 0;
+  animation: opa 40s linear infinite;
+}
+
+@keyframes roll {
+  50% {
+    transform: translate(-40%, 0);
+  }
+  100% {
+    transform: translate(0%, 0);
+  }
+}
+
+@keyframes zoomin {
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomout {
+  0% {
+    transform: scale(2.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blur {
+  0% {
+    filter: blur(30px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@keyframes opa {
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10%, 0%);
+  }
+}
+
+@keyframes swipdown {
+  0% {
+    opacity: 0;
+    transform: translate(0%, -50%)
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+
+.show {
+  transition: opacity 400ms;
+}
+
+.hide {
+  opacity: 0;
+}
