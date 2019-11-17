@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
-import pro from "./promare.png"
-import pro2 from "./pro2.png"
-import logo from "./Logo_Promare.png"
-import sound from "./nexus.mp3"
+import pro from "./static/img/promare.png"
+import logo from "./static/img/Logo_Promare.png"
+import sound from "./static/sounds/nexus.mp3"
 
 
 const demos = [

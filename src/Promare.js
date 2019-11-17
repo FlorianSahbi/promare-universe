@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import pro from "./promare.png"
-import pro2 from "./pro2.png"
-import logo from "./Logo_Promare.png"
 
 function App() {
   let demos = [];
@@ -23,35 +20,21 @@ function App() {
   }
   demos.push(cloudsuit);
 
-  // const urbansky = {
-  //   one: {
-  //     bg: "http://caraujo_pens.surge.sh/images/l1MS7kk.jpg",
-  //     bm: "none"
-  //   },
-  //   two: {
-  //     bg: "http://caraujo_pens.surge.sh/images/6QBLNy6.jpg",
-  //     bm: "multiply"
-  //   },
-  //   three: {
-  //     bg: "http://caraujo_pens.surge.sh/images/bmnzJRs.png",
-  //     bm: "none"
-  //   }
-  // }
-
   const urbansky = {
     one: {
-      bg: pro,
+      bg: "http://caraujo_pens.surge.sh/images/l1MS7kk.jpg",
       bm: "none"
     },
     two: {
-      bg: pro,
+      bg: "http://caraujo_pens.surge.sh/images/6QBLNy6.jpg",
       bm: "multiply"
     },
     three: {
-      bg: pro,
-      bm: "multiply"
+      bg: "http://caraujo_pens.surge.sh/images/bmnzJRs.png",
+      bm: "none"
     }
   }
+
   demos.push(urbansky);
 
   const knowledge = {
@@ -120,7 +103,6 @@ function App() {
   return (
     <>
       <div className="changer">
-        <img src={logo} alt="bla" style={{ width: "100%" }} />
         <div className="demos">
           <a onClick={(e) => handleClick(e, 1)} href="https://www.google.com">Galo</a>
           <a onClick={(e) => handleClick(e, 2)} href="https://www.google.com">Lio</a>
